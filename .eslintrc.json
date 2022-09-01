@@ -1,0 +1,58 @@
+{
+  "env": {
+    "es6": true,
+    "node": true
+  },
+  "extends": [
+    "airbnb-base",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:prettier/recommended",
+    "trybe-backend"
+  ],
+  "globals": {
+    "db": "writable",
+    "Atomics": "readonly",
+    "SharedArrayBuffer": "readonly"
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": 2018,
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "prettier"],
+  "rules": {
+    "quotes": [
+      2,
+      "single",
+      { "avoidEscape": true, "allowTemplateLiterals": true }
+    ],
+    "no-undef": "off",
+    "sonarjs/no-duplicate-string": ["error", 5],
+    "no-underscore-dangle": "off",
+    "no-useless-constructor": "off",
+    "import/prefer-default-export": "off",
+    "no-param-reassign": "off",
+    "prettier/prettier": ["warn", { "endOfLine": "auto", "singleQuote": true }],
+    "no-shadow": "off",
+    "@typescript-eslint/no-shadow": "error",
+    "max-lines-per-function": ["error", { "max": 500 }],
+    "no-unused-vars": "off",
+    "object-shorthand": ["warn", "never"],
+    "prefer-arrow-callback": ["warn", { "allowUnboundThis": false }],
+    "eqeqeq": ["warn", "always"],
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "ts": "never"
+      }
+    ],
+    "no-use-before-define": "off",
+    "class-methods-use-this": "off"
+  },
+  "settings": {
+    "import/resolver": {
+      "typescript": {}
+    }
+  }
+}
